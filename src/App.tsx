@@ -20,7 +20,6 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <<QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="system" storageKey="stipendia-theme">
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -42,7 +41,8 @@ const App = () => (
           </Layout>
         </HashRouter>
       </TooltipProvider>
-    </QueryClientProvider>
+    <ThemeProvider defaultTheme="system" storageKey="stipendia-theme">
+  </QueryClientProvider>
 );
 
 export default App;
