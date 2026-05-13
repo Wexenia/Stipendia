@@ -42,7 +42,7 @@ const App = () => (
           </Layout>
         </HashRouter>
       </TooltipProvider>
-    </ThemeProvider>
+    </ThemeProvider> {/* This was likely missing or misplaced */}
   </QueryClientProvider>
 );
 
