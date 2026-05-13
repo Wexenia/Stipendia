@@ -20,4 +20,4 @@ Scriptet `scripts/generate-scholarship-data.mjs` läser Excel-filen, filtrerar f
 Filtreringen är avsiktligt försiktig. Den behåller poster med tydlig koppling till studenter, studerande, universitet, högskola, eftergymnasiala studier, examensarbete, kandidat/master/magister eller liknande. Den filtrerar bort poster som främst gäller forskning, doktorander, professorer, gymnasium/grundskola, barn/ungdom utan högskolekoppling, organisationer, företag, idrott, kulturutövare, social hjälp eller vård utan studiekoppling.
 
 `index.json` innehåller metadata som `totalOriginalCount`, `totalFilteredCount`, `filterDescription`, `generatedAt`, `fieldChunks` och `idToChunk`. Appen använder detta för att fortsätta ladda stipendier stegvis utan att hämta hela databasen på mobil.
-haha
+
