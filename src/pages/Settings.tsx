@@ -1,3 +1,5 @@
+import { useTheme } from "@/components/theme-provider";
+import { Sun, Moon, Monitor } from "lucide-react";
 import { useEffect, useState } from "react";
 import AppScreen from "@/components/layout/AppScreen";
 import { Switch } from "@/components/ui/switch";
@@ -35,6 +37,7 @@ function saveNotifs(n: Notifs) { localStorage.setItem(NOTIF_KEY, JSON.stringify(
 
 export default function SettingsPage() {
   const t = useT();
+  const {theme, setTheme} = useTheme();
   const [notifs, setNotifs] = useState<Notifs>(defaultNotifs);
   const [lang, setLangLocal] = useState<Lang>(getLang());
 
@@ -99,6 +102,32 @@ export default function SettingsPage() {
               destructive
               onConfirm={() => { clearAll(); toast.success(t("settings.done")); }}
             />
+          </div>
+        </Section>
+
+        <Section icon={Sun} title={t("settings.theme")}>
+          <div className="flex gap-2 p-2">
+            <button onClick={() => setTheme("light")} className={cn(
+              "flex-1 flex flex-col items-center justify-center gap-1.5 py-3 rounded-xl text-xs font-semibold transition-colors",
+              theme === "light" ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+            )}>
+              <Sun className="h-5 w-5" />
+              {t("settings.theme.light")}
+            </button>
+            <button onClick={() => setTheme("dark")} className={cn(
+              "flex-1 flex flex-col items-center justify-center gap-1.5 py-3 rounded-xl text-xs font-semibold transition-colors",
+              theme === "dark" ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+            )}>
+              <Moon className="h-5 w-5" />
+              {t("settings.theme.dark")}
+            </button>
+            <button onClick={() => setTheme("system")} className={cn(
+              "flex-1 flex flex-col items-center justify-center gap-1.5 py-3 rounded-xl text-xs font-semibold transition-colors",
+              theme === "system" ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:bg-secondary/80"
+            )}>
+              <Monitor className="h-5 w-5" />
+              {t("settings.theme.system")}
+            </button>
           </div>
         </Section>
 
