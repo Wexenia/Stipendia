@@ -15,6 +15,12 @@ export function setLang(l: Lang) {
 }
 
 const sv = {
+  //theme settings
+  "settings.theme": "Utseende",
+  "settings.theme.light": "Ljust",
+  "settings.theme.dark": "Mörkt",
+  "settings.theme.system": "System",
+  
   // Nav
   "nav.home": "Hem",
   "nav.profile": "Profil",
@@ -323,6 +329,12 @@ const sv = {
 };
 
 const en: Record<keyof typeof sv, string> = {
+   
+  "settings.theme": "Theme",
+  "settings.theme.light": "Light",
+  "settings.theme.dark": "Dark",
+  "settings.theme.system": "System",
+  
   "nav.home": "Home",
   "nav.profile": "Profile",
   "nav.scholarships": "Scholarships",
