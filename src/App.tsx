@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
@@ -19,28 +20,29 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <HashRouter>
-        <Layout>
-          <Suspense fallback={<div className="px-4 py-10 text-center text-sm text-muted-foreground">Stipendia</div>}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/profil" element={<Profile />} />
-              <Route path="/stipendier" element={<Scholarships />} />
-              <Route path="/stipendier/:id" element={<ScholarshipDetail />} />
-              <Route path="/matchningar" element={<Matches />} />
-              <Route path="/sparade" element={<Navigate to="/stipendier?sparade=1" replace />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/installningar" element={<SettingsPage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </Layout>
-      </HashRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+    <ThemeProvider defaultTheme="system" storageKey="stipendia-theme">
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <HashRouter>
+          <Layout>
+            <Suspense fallback={<div className="px-4 py-10 text-center text-sm text-muted-foreground">Stipendia</div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/profil" element={<Profile />} />
+                <Route path="/stipendier" element={<Scholarships />} />
+                <Route path="/stipendier/:id" element={<ScholarshipDetail />} />
+                <Route path="/matchningar" element={<Matches />} />
+                <Route path="/sparade" element={<Navigate to="/stipendier?sparade=1" replace />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/installningar" element={<SettingsPage />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </Layout>
+        </HashRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
 );
 
 export default App;
