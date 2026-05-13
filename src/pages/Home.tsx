@@ -212,7 +212,7 @@ function ExploreCard({ to, icon: Icon, title, desc, tone }: { to: string; icon: 
     neutral: "from-[#F7F3EA] via-white to-[#E6E0D2] text-[#58615A]",
   }[tone];
   return (
-    <Link to={to} className="group relative min-w-[13.75rem] snap-start overflow-hidden rounded-[26px] border border-white/70 bg-card p-4 shadow-soft transition-all active:scale-[0.99] hover:-translate-y-0.5 hover:shadow-card">
+    <Link to={to} className=" force-light group relative min-w-[13.75rem] snap-start overflow-hidden rounded-[26px] border border-white/70 bg-card p-4 shadow-soft transition-all active:scale-[0.99] hover:-translate-y-0.5 hover:shadow-card">
       <div className={`absolute inset-0 bg-gradient-to-br ${toneClass}`} />
       <Icon className="absolute -right-5 top-2 h-24 w-24 rotate-[-8deg] text-current opacity-[0.13]" strokeWidth={1.7} />
       <div className="absolute -left-8 -top-8 h-24 w-24 rounded-full bg-white/35 blur-[1px]" />
