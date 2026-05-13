@@ -141,4 +141,17 @@
   .shadow-lift { box-shadow: var(--shadow-lift); }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { scrollbar-width: none; }
+  .force-light {
+    --background: 0 0% 98%;
+    --foreground: 152 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 152 30% 12%;
+    --muted: 145 25% 95%;
+    --muted-foreground: 152 8% 42%;
+    --border: 145 20% 90%;
+    --secondary: 145 40% 96%;
+    --secondary-foreground: 152 30% 12%;
+    --primary-soft: 143 53% 94%;
+    --shadow-card: 0 1px 3px hsl(150 30% 15% / 0.05), 0 8px 24px hsl(150 30% 20% / 0.08);
+  }
 }
