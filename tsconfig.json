@@ -7,7 +7,7 @@
     },
     "jsx": "react-jsx",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
     "noImplicitAny": false,
     "noUnusedParameters": false,
     "skipLibCheck": true,
