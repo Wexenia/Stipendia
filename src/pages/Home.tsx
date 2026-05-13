@@ -162,7 +162,7 @@ function ExploreRail() {
         <h2 className="text-[17px] font-bold leading-tight">{t("home.exploreTitle")}</h2>
         <span className="text-[11px] font-semibold text-muted-foreground">{t("home.exploreHint")}</span>
       </div>
-      <div className="no-scrollbar -mx-1 flex max-w-full snap-x gap-3 overflow-x-auto px-1 pb-1.5">
+      <div className="force-light no-scrollbar -mx-1 flex max-w-full snap-x gap-3 overflow-x-auto px-1 pb-1.5">
         <ExploreCard
           to="/stipendier?q=student"
           icon={GraduationCap}
