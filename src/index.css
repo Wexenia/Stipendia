@@ -117,9 +117,9 @@
     --ring: 146 56% 42%;
 
     --gradient-page: #0B0D0C;
+    }
   }
 }
-
 @layer base {
   * { @apply border-border; }
   html { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100%; background: hsl(var(--app-bg)); }
