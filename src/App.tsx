@@ -19,7 +19,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
+  <<QueryClientProvider client={queryClient}>
     <ThemeProvider defaultTheme="system" storageKey="stipendia-theme">
       <TooltipProvider>
         <Toaster />
