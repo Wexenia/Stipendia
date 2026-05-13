@@ -76,6 +76,53 @@
   }
 }
 
+  .dark {
+    --background: 150 10% 6%;
+    --foreground: 150 10% 98%;
+
+    --app-bg: 150 10% 4%;
+    --app-surface: 150 10% 8%;
+
+    --card: 150 10% 9%;
+    --card-foreground: 150 10% 98%;
+
+    --popover: 150 10% 9%;
+    --popover-foreground: 150 10% 98%;
+
+    --primary: 146 56% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 146 50% 15%;
+    --primary-glow: 146 56% 52%;
+    --primary-dark: 151 60% 30%;
+
+    --secondary: 150 10% 14%;
+    --secondary-foreground: 150 10% 98%;
+
+    --muted: 150 10% 14%;
+    --muted-foreground: 150 5% 60%;
+
+    --accent: 150 10% 18%;
+    --accent-foreground: 150 10% 98%;
+    --accent-soft: 150 10% 12%;
+
+    --success: 146 60% 38%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 146 50% 15%;
+
+    --warning: 38 92% 48%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 10% 18%;
+    --input: 150 10% 18%;
+    --ring: 146 56% 42%;
+
+    --gradient-page: #0B0D0C;
+  }
+}
+
 @layer base {
   * { @apply border-border; }
   html { font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100%; background: hsl(var(--app-bg)); }
