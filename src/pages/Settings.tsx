@@ -1,10 +1,9 @@
 import { useTheme } from "@/components/theme-provider";
-import { Sun, Moon, Monitor } from "lucide-react";
 import { useEffect, useState } from "react";
 import AppScreen from "@/components/layout/AppScreen";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
-import { Bell, CalendarDays, Languages, Database, Trash2, RotateCcw, Bookmark, Info, Shield } from "lucide-react";
+import { Bell, CalendarDays, Languages, Database, Trash2, RotateCcw, Bookmark, Info, Shield, Sun, Moon, Monitor  } from "lucide-react";
 import { getLang, setLang, useT, Lang } from "@/lib/i18n";
 import { clearAll, clearProfile } from "@/lib/storage";
 import { toast } from "sonner";
